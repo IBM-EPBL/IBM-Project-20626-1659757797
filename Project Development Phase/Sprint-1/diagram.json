@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "author": "sathanandha Krishna k",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 167.92, "left": -18.49, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -5.53,
+      "left": 120.4,
+      "attrs": { "temperature": "80" }
+    }
+  ],
+  "connections": [
+    [ "uno:5V", "dht1:VCC", "red", [ "v39.75", "h-161.31", "v-268.53", "h-19.97" ] ],
+    [ "dht1:GND", "uno:GND.1", "black", [ "v54.56", "h-69.34" ] ],
+    [ "dht1:SDA", "uno:2", "green", [ "v47.16", "h74.98", "v1.48" ] ]
+  ]
+}
