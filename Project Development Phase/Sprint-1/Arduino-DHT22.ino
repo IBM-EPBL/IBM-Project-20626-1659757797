@@ -122,7 +122,7 @@ void loop() {
   }
 
   //Obivously the output.It is like json format 'cause it will help us for future sprints
-  String payload = "{\"senor_values\":{";
+  String payload = "{\"sensor_values\":{";
   payload+="\"gas_ppm\":";
   payload+=gas_ppm;
   payload+=",";
