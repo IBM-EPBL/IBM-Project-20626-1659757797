@@ -3,18 +3,20 @@
   "author": "sathanandha Krishna k",
   "editor": "wokwi",
   "parts": [
-    { "type": "wokwi-arduino-uno", "id": "uno", "top": 167.92, "left": -18.49, "attrs": {} },
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 187.98, "left": -51.63, "attrs": {} },
     {
       "type": "wokwi-dht22",
       "id": "dht1",
-      "top": -5.53,
-      "left": 120.4,
-      "attrs": { "temperature": "80" }
+      "top": 238.45,
+      "left": 227.51,
+      "attrs": { "humidity": "89", "temperature": "48" }
     }
   ],
   "connections": [
-    [ "uno:5V", "dht1:VCC", "red", [ "v39.75", "h-161.31", "v-268.53", "h-19.97" ] ],
-    [ "dht1:GND", "uno:GND.1", "black", [ "v54.56", "h-69.34" ] ],
-    [ "dht1:SDA", "uno:2", "green", [ "v47.16", "h74.98", "v1.48" ] ]
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "esp:3V3", "dht1:VCC", "red", [ "v29.61", "h141.21" ] ],
+    [ "esp:GND.1", "dht1:GND", "black", [ "h2.78", "v89.13", "h175.07", "v-32.27" ] ],
+    [ "dht1:SDA", "esp:D15", "green", [ "v63.09", "h-135.02", "v6.45" ] ]
   ]
 }
